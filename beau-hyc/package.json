@@ -2,6 +2,7 @@
   "name": "beau-hyc",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wfrei020.github.io/hackerYouChallenge",
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
