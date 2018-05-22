@@ -14,9 +14,6 @@ class LcboProductApi extends Component{
                  };
     }
    
-    
-
-    
     componentDidMount(){
       const ACCESS_KEY = 'MDphNjhjNGUxZS01Yjc1LTExZTgtYjkzMy01M2EwZDBjMGQ1NDM6ako4YTU4RDRvU2tVanBHR0NjYmM5VGFUZzI3YVJ2QXBLbkw5'
     fetch(`https://lcboapi.com/products?q='Beau's All Natural Brewing'&where=is_seasonal&per_page=30&access_key&access_key=${ACCESS_KEY}`, {
@@ -33,9 +30,6 @@ class LcboProductApi extends Component{
     
 
     render() {
-      
-
-
 
         var products = _.map(this.state.products, (product) => {
             

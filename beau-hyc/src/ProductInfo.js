@@ -92,7 +92,7 @@ class ProductInfo extends Component{
                     <tr><td>{store.city}, {store.postal_code}</td></tr>
                     <tr><td>{store.distance_in_meters/1000} km away</td></tr>
                     <tr><td>tel:{store.telephone}</td></tr>
-                    <tr><td>instock: {store.quantity}</td></tr>
+                    <tr><td>in-stock: {store.quantity}</td></tr>
                 </tbody>
             </table>
         </td>
@@ -161,26 +161,25 @@ class ProductInfo extends Component{
     return (
     
     <div className="scrollable" >
-    <table>
-    <tbody>
-    <tr><td width="30%"><img width="150px" src={product.image_url} alt={product.name}></img></td>
-    <td>
-    <table><tbody><tr><th>{product.name}</th></tr>
-    <tr><td><strong fontSize="35px">{product.package}</strong></td></tr>
-    <tr><td>category: {product.primary_category}</td></tr>
-    <tr><td>type: {product.secondary_category}</td></tr>
-    <tr><td>Alcohol content:  {product.alcohol_content/100}%</td></tr>
-    <tr>{price()}</tr>
-    </tbody>
-    </table>
-    </td>
-    </tr>
-    <tr><td><strong>LCBO Locations</strong></td></tr>
-    {stores}
-    
-    </tbody>
-    </table>
-    
+            <table>
+                <tbody>
+                    <tr><td width="30%"><img width="150px" src={product.image_url} alt={product.name}></img></td>
+                        <td>
+                            <table>
+                                <tbody><tr><th>{product.name}</th></tr>
+                                    <tr><td><strong fontSize="35px">{product.package}</strong></td></tr>
+                                    <tr><td>category: {product.primary_category}</td></tr>
+                                    <tr><td>type: {product.secondary_category}</td></tr>
+                                    <tr><td>Alcohol content:  {product.alcohol_content/100}%</td></tr>
+                                    <tr>{price()}</tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr><td><strong>LCBO Locations</strong></td></tr>
+                    {stores}
+                </tbody>
+            </table>
     </div>
 )
     }
