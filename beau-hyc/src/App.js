@@ -10,26 +10,9 @@ class App extends Component {
         this.state = {products: [],
         };
     }
-      componentDidMount(){
-      this.LcboProducts();
-  }
   
-  
-      LcboProducts(){
-      fetch({url:"https://lcboapi.com/Products",
-                        headers:{'Authorization':
-                        'MDphNjhjNGUxZS01Yjc1LTExZTgtYjkzMy01M2EwZDBjMGQ1NDM6ako4YTU4RDRvU2tVanBHR0NjYmM5VGFUZzI3YVJ2QXBLbkw5'
-      }})
-   .then(({ results }) => this.setState({ products: results }));
-                        
-      
-  }
+
   render() {
-      
-      
-      
-      
-      
       
     return (
       <div className="beau-main">
