@@ -31,56 +31,61 @@ class LcboProductApi extends Component{
     }
 
     
-onClickElement(id , name){
-    console.log("i entered this ufnction");
-    var modal = document.getElementById('myProductInfo');
-     modal.display = "block";
-    
-    }
+
     render() {
       
 
-      
+
+
         var products = _.map(this.state.products, (product) => {
             
                 
             
             if(product.image_thumb_url != null){
-        
-            return <div key={product.id}>
+       
+   
             
-         <div align="center">  
+            return <div key={product.id} className="grid-item">
+            
+        
+    
+         <div align="center">
          <Popup 
-             trigger={<input type="image" width="30%" src={product.image_thumb_url} name={product.name} alt={product.name}></input>}
+             trigger={<input type="image" width="30%" title={product.tags} src={product.image_thumb_url} name={product.name} alt={product.name}></input>}
              modal
              closeOnDocumentClick > 
-             <span> 
+             <span >
             <ProductInfo product={product} />
              </span>
-         </Popup> 
-               </div><div valign = "middle">{product.name}</div>
+         </Popup> </div>
+               <div valign = "middle">{product.name}</div>
+              
+            
                
-               
             
+   
             
+            </div> 
             
-            </div>
-            
-            
+        
+
             
             }
         });
         
 
         return(
-     
-    <div>
+     <div>
+     <h2>Seasonal beers currently available at LCBO</h2>
+    <div className="grid-container" >
 
-     {products}
+{products}
+  
+    
 
      </div>
      
-    
+    </div>
   
         )
         

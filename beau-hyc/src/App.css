@@ -1,5 +1,6 @@
 .beau-main {
   text-align: center;
+  background-color:#f9f7e7;
 }
 
 .beau-logo {
@@ -11,7 +12,7 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: #f9f7e7;
 }
 
 .beau-title {
@@ -28,7 +29,37 @@
 }
 
 
+.scrollable {
+    height: 600px; /* or any value */
+    font-size:15px;
+       font-family: Open sans;
+    overflow-y: auto;
+    background-color:#fcfbf5;
+}
 
+
+.grid-container {
+  display: grid;
+   background-color:#faf8eb;
+  grid-template-columns: auto auto auto;
+
+  padding: 10px;
+}
+.grid-item {
+
+border: 3px solid #faf8eb;
+  padding: 20px;
+  background-color:#fcfbf5;
+  font-size: 30px;
+  text-align: center;
+}
+.store-info{
+border: 3px solid #f9f7e7;
+background-color:white;
+}
+.schedule-list{
+font-size:18px;
+}
 
 
 @keyframes App-logo-spin {
