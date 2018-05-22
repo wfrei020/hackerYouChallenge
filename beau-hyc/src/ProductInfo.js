@@ -36,7 +36,7 @@ class ProductInfo extends Component{
     .then(response => response.json())
     .then((data) => {
         this.setState({stores: data.result});
-        console.log(data);
+        
     })
     .catch(error => console.error('parsing error',error))
    }

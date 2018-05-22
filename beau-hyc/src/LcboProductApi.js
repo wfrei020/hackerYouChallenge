@@ -25,7 +25,7 @@ class LcboProductApi extends Component{
     .then(response => response.json())
     .then((data) => {
         this.setState({
-        products: data.result}) ; console.log(data);})
+        products: data.result}) ; })
     .catch(e => console.error('parsing error', e)) // End Fetch
 
     }
