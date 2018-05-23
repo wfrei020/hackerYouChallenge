@@ -73,13 +73,13 @@ class ProductInfo extends Component{
         function price(){
             if(product.has_clearance_sale)
             {
-                return (<td>price : {product.price_in_cents / 100}$ 
-                <strong>sale: save {product.clearance_sale_savings_in_cents /100}$</strong>
+                return (<td>Price : ${product.price_in_cents / 100} 
+                <strong>Sale: Save ${product.clearance_sale_savings_in_cents /100}</strong>
                 </td>)
             }
             else
             {
-                return(<td>price : {product.price_in_cents / 100}$</td>);}
+                return(<td>Price : ${product.price_in_cents / 100}</td>);}
             }
         
         function getSchedule(dayofWeek , storeInfo)
@@ -132,8 +132,15 @@ class ProductInfo extends Component{
             if(openTime%1 !== 0){
                 openTime = parseInt(openTime,0)+":30";
             }
+            else
+            {
+                openTime = parseInt(openTime,0)+":00";
+            }
             if(closeTime%1 !== 0){
                 closeTime = parseInt(openTime,0)+":30";
+            }
+            else{
+                closeTime = parseInt(openTime,0)+":00";
             }
             
            return  <tr><td>{dayName}</td><td> {openTime} am - {closeTime} pm</td></tr>
@@ -156,8 +163,8 @@ class ProductInfo extends Component{
                                         <tbody>
                                             <tr><td>{store.city}, {store.postal_code}</td></tr>
                                             <tr><td>{store.distance_in_meters/1000} km away</td></tr>
-                                            <tr><td>tel:{store.telephone}</td></tr>
-                                            <tr><td>in-stock: {store.quantity}</td></tr>
+                                            <tr><td>Tel:{store.telephone}</td></tr>
+                                            <tr><td>In stock: {store.quantity}</td></tr>
                                         </tbody>
                                     </table>
                                 </td>
@@ -211,7 +218,7 @@ class ProductInfo extends Component{
           else if(loaded && store.length === 0) {return <tr><td colSpan="2" color="red"><strong fontSize="13px">Loading...</strong></td></tr>}
           else
           {
-              return <tr><td colSpan="2" color="red"><strong fontSize="13px">Sorry, there are no LCBO near your location, please select another</strong></td></tr>
+              return <tr><td colSpan="2" color="red"><strong fontSize="13px">Sorry, there are none available at an LCBO near your location</strong></td></tr>
           }
       }
       
@@ -225,8 +232,8 @@ class ProductInfo extends Component{
                             <table>
                                 <tbody><tr><th>{product.name}</th></tr>
                                     <tr><td><strong fontSize="35px">{product.package}</strong></td></tr>
-                                    <tr><td>category: {product.primary_category}</td></tr>
-                                    <tr><td>type: {product.secondary_category}</td></tr>
+                                    <tr><td>Category: {product.primary_category}</td></tr>
+                                    <tr><td>Type: {product.secondary_category}</td></tr>
                                     <tr><td>Alcohol content:  {product.alcohol_content/100}%</td></tr>
                                     <tr>{price()}</tr>
                                 </tbody>

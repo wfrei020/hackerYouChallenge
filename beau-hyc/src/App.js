@@ -17,8 +17,8 @@ class App extends Component {
                   <h1 className="beau-title">Seasonal</h1>
             </header>
             <p className="beau-intro">
-                  Canadians' experience a long and endless winter, why not enjoy the short summer
-                  with Beau's Seasonal Beer crafted for a wonderful and unique experience.  Our certified organic beer, prepared with honest consideration
+                  Canadians experience a long and endless winter, so why not enjoy the short summer
+                  with Beau's Seasonal Beer crafted for a wonderful and unique experience!  Our certified organic beer, prepared with honest consideration
                   to our beautiful evironment and our local community, and delivered
                   with a sense of friendly relationships. 
             </p>
