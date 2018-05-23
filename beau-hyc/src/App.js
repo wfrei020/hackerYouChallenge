@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import logo from './images/beaus-beige-logo.svg';
 import './App.css';
-import './LcboProductApi.js';
 import LcboProductApi from './LcboProductApi.js';
 
+//Auto generated javascript file from npm react
+
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {products: [],
-        };
-    }
-    
+
   
   render() {
       
@@ -18,7 +14,7 @@ class App extends Component {
       <div className="beau-main">
             <header className="beau-header">
                   <img src={logo} className="beau-logo" alt="logo" />
-                  <h1 className="beau-title">Summer Time</h1>
+                  <h1 className="beau-title">Seasonal</h1>
             </header>
             <p className="beau-intro">
                   Canadians' experience a long and endless winter, why not enjoy the short summer
@@ -26,6 +22,7 @@ class App extends Component {
                   to our beautiful evironment and our local community, and delivered
                   with a sense of friendly relationships. 
             </p>
+            {/* Call my LcboProductApi Component to display products from lcbo api, to keep this clean and small*/}
             <div><LcboProductApi /></div>
       </div>
       
